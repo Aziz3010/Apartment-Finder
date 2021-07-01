@@ -27,7 +27,7 @@ ul{
 a{
     text-decoration: none;
     color: var(--logoColor);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 a:hover{
@@ -39,6 +39,7 @@ a:hover{
 
 #Navbar{
     background-color: #eee;
+    padding: .5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -629,3 +630,61 @@ a:hover{
     }
 }
 
+/* How */
+
+#How{
+    background-color: red;
+    padding: 4rem 0;
+}
+
+#How .topText{
+    background-color: rosybrown;
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+#How .topText h2{
+    color: var(--logoColor);
+    margin-bottom: 1rem;
+    font-size: 30px;
+    font-weight: 600;   
+}
+
+#How .topText p{
+    font-size: 13px;
+    color: var(--logoColor);
+}
+
+#How .item{
+    background-color: var(--highLighterBg);
+    padding: 6rem 3rem 3rem 3rem;
+    color: #fff;
+}
+
+#How .item h6{
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+
+#How .item h6::before{
+    content: "01";
+    position: absolute;
+    left: -25px;
+    color: #fff;
+    background-color: blue;
+}
+
+#How .item p{
+    margin: 1rem 0;
+    font-size: 13px;
+    color: #fff;
+    padding-right: 1.5rem;
+}
+
+#How .item a{
+    font-size: 14px;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
