@@ -633,12 +633,10 @@ a:hover{
 /* How */
 
 #How{
-    background-color: red;
     padding: 4rem 0;
 }
 
 #How .topText{
-    background-color: rosybrown;
     width: fit-content;
     margin-bottom: 2rem;
 }
@@ -655,36 +653,73 @@ a:hover{
     color: var(--logoColor);
 }
 
+#How .row{
+    margin-top: 4rem;
+}
+
 #How .item{
-    background-color: var(--highLighterBg);
+    background-color: #fff;
     padding: 6rem 3rem 3rem 3rem;
-    color: #fff;
+    color: var(--logoColor);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #777;
+}
+
+#How .item >span{
+    position: absolute;
+    left: -25px;
+    top: -31%;
+    color: #000;
+    font-size: 135px;
+    font-weight: 700;
 }
 
 #How .item h6{
-    color: #fff;
+    color: var(--logoColor);
     font-weight: 600;
     position: relative;
 }
 
-#How .item h6::before{
-    content: "01";
+#How .item h6 span{
     position: absolute;
     left: -25px;
-    color: #fff;
-    background-color: blue;
+    color: var(--logoColor);
+    font-weight: 700;
 }
 
 #How .item p{
     margin: 1rem 0;
     font-size: 13px;
-    color: #fff;
+    color: var(--logoColor);
     padding-right: 1.5rem;
 }
 
 #How .item a{
     font-size: 14px;
     padding-bottom: .5rem;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--logoColor);
+    color: var(--logoColor);
+}
+
+#How .main{
+    background-color: var(--highLighterBg);
     color: #fff;
+}
+
+#How .main span,
+#How .main h6,
+#How .main h6 span,
+#How .main p{
+    color: #fff;
+}
+#How .main a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width:991px) {
+    #How .item{
+        margin-bottom: 1rem;
+    }
 }
