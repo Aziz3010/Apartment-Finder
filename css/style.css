@@ -1,0 +1,380 @@
+:root{
+    --logoColor:#1f373d;
+    --highLighterBg: #ffcc01;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    background-color: #fcfcfc;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--logoColor);
+    font-weight: 600;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #28474e;
+}
+
+/* Navbar */
+
+#Navbar{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20000;
+}
+
+#Navbar .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: .5rem 0;
+}
+
+/* logo */
+
+.logo{
+    width: 30%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2{
+    color: var(--logoColor);
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+}
+
+/* btn */
+#Navbar #btnBox{
+    display: none;
+}
+
+#Navbar #btnMenu{
+    width: 50px;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: auto;
+    border-radius: 3px;
+}
+
+#Navbar #btnBox #btnMenu span{
+    background-color: var(--logoColor);
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+/* #nav */
+
+#nav{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav ul li{
+    margin-right: 8px;
+}
+
+#nav ul li:last-child{
+    margin-right: 0px;
+}
+
+#nav ul li a{
+    padding: .55rem 5px;
+    display: block;
+    border-bottom: 2px solid transparent;
+}
+
+#nav ul li a:hover{
+    border-bottom: 2px solid var(--highLighterBg);
+}
+
+/* joinBox */
+
+#Navbar .joinBox{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#Navbar .joinBox a{
+    padding: .55rem 0;
+}
+
+#Navbar .joinBox a:first-child{
+    border-bottom: 2px solid transparent;
+}
+
+#Navbar .joinBox a:first-child:hover{
+    border-bottom: 2px solid var(--highLighterBg);
+}
+
+#Navbar .joinBox a:last-child{
+    background-color: var(--highLighterBg);
+    padding: .55rem 1rem;
+    border-radius: 5px;
+    transition: color 300ms;
+}
+
+#Navbar .joinBox a:last-child:hover{
+    color: #fff;
+}
+
+@media screen and (max-width:991px) {
+
+    #Navbar #btnBox{
+        display: flex;
+    }
+
+    #Navbar .container{
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    #nav{
+        margin-top: .5rem;
+        width: 60%;
+        margin-left: auto;
+        background-color: #cce6f0;
+        border-radius: 5px 5px 0 0;
+        display: none;
+    }
+
+    #nav ul{
+        flex-direction: column;
+        padding: .5rem;
+        width: 100%;
+    }
+
+    #Navbar .joinBox{
+        width: 60% !important;
+        background-color: #ddf0f8;
+        border-radius: 0 0 5px 5px;
+        margin-left: auto;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .joinBox a{
+        display: block;
+        margin: .3rem 0;
+        width: fit-content;
+    }
+
+}
+
+@media screen and (max-width:245px) {
+    .logo{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;    
+    }
+
+    .logo #btnBox{
+        margin-top: .5rem;
+        margin-left: auto;
+    }
+
+    .joinBox a:nth-child(2){
+        font-size: 13px;
+    }
+
+}
+
+/* Home */
+
+#Home .container .mainBox{
+    background-image: linear-gradient(to right, #fff 15% ,  #96bece 0%);
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.mainBox .text{
+    padding: 1rem;
+    width: fit-content;
+}
+
+.mainBox .text h1{
+    font-size: 40px;
+    color: var(--logoColor);
+}
+
+.mainBox .text .inputBox{
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.inputBox i{
+    font-size: 15px;
+    color: var(--logoColor);
+    width: 10%;
+    text-align: center;
+}
+
+.inputBox input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: .8rem 0;
+    width: 90%;
+}
+
+.inputBox button{
+    background-color: var(--highLighterBg);
+    border: none;
+    padding: .8rem;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 500;
+    transition: color 400ms;
+}
+
+.inputBox button:hover{
+    color: #fff;
+}
+
+@media screen and (max-width:325px) {
+    .mainBox .text h1{
+        font-size: 30px;
+    }
+    .inputBox i{
+        width: 15%;
+    }
+    .inputBox input{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:230px) {
+    .inputBox i{
+        display: none;
+    }
+    .inputBox input{
+        width: 100%;
+        border-radius: 5px 0 0 5px;
+    }
+}
+
+
+/* scrollText */
+#Home .container .mainBox .scrollText{
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;    
+    bottom: 70px;
+    left: -35px;
+}
+
+.mainBox .scrollText i{
+    font-size: 18px;
+    color: #aaa;
+}
+
+.mainBox .scrollText p{
+    margin: 0 0 0 10px;
+    color: #aaa;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+@media screen and (max-width:320px){
+    #Home .container .mainBox .scrollText{
+        display: none;
+    }
+}
+
+/* phoneText */
+
+.mainBox .phoneText{
+    background-color: var(--highLighterBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+}
+
+.phoneText .phonebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-left: 1px solid #eee;
+}
+
+.mainBox .phonebox:nth-child(1){
+    border-left: none;
+}
+
+
+.phonebox p{
+    color: var(--logoColor);
+    font-weight: 600;
+}
+
+@media screen and (max-width:991px) {
+    .mainBox .phoneText{
+        flex-direction: column;
+    }
+    .phoneText .phonebox{
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .mainBox .phonebox:nth-child(2){
+        border-bottom: none;
+    }
+}
