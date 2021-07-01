@@ -723,3 +723,74 @@ a:hover{
         margin-bottom: 1rem;
     }
 }
+
+/* Services */
+
+#Services{
+    padding: 4rem 0;
+}
+
+#Services .topText{
+    margin-bottom: 2rem;
+}
+
+#Services .row .image{
+    padding: 1rem;
+}
+
+#Services .row .image img{
+    width: 100%;
+}
+
+#Services .row .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Services .row .item{
+    margin-bottom: 1.5rem;
+    background-color: #faf8f5;
+}
+
+#Services .row .item h6{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--logoColor);
+}
+
+#Services .row .item p{
+    margin: 0;
+    color: var(--logoColor);
+}
+
+@media screen and (max-width:991px) {
+    #Services .row .info{
+        margin-top: 1.5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #Services .row .item{
+        width: calc((100% / 3) - 1rem );
+        margin: 0 .5rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #Services .row .image{
+        display: none;
+    }
+    #Services .row .info{
+        flex-direction: column;
+        margin: 0;
+    }
+    #Services .row .item{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Agent */
