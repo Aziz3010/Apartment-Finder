@@ -13,6 +13,7 @@
 
 body{
     background-color: #fcfcfc;
+    font-family: 'Montserrat', sans-serif;
 }
 
 ul{
@@ -37,7 +38,7 @@ a:hover{
 /* Navbar */
 
 #Navbar{
-    background-color: #fff;
+    background-color: #eee;
     position: fixed;
     width: 100%;
     top: 0;
@@ -109,7 +110,7 @@ a:hover{
 }
 
 #nav ul li a{
-    padding: .55rem 5px;
+    padding: .55rem 0px;
     display: block;
     border-bottom: 2px solid transparent;
 }
@@ -378,3 +379,253 @@ a:hover{
         border-bottom: none;
     }
 }
+
+/* Statistics */
+
+#Statistics{
+    padding: 7rem 0;
+}
+
+#Statistics .row{
+    align-items: center;
+}
+
+#Statistics .text h2{
+    color: var(--logoColor);
+    margin-bottom: 2rem;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#Statistics .text p{
+    font-size: 12px;
+    padding-right: 1rem;
+    margin-top: 2rem;
+}
+
+#Statistics .items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#Statistics .items .item{
+    background-color: #f6f5f4;
+    padding: 2rem;
+    margin: 0 .5rem .5rem 0;
+    width: calc((100% / 2) - .5rem);
+    text-align: center;
+}
+#Statistics .items .item:nth-child(2),
+#Statistics .items .item:nth-child(4){
+    margin-right: 0;
+}
+
+#Statistics .items .item span{
+    display: block;
+    margin-bottom: .5rem;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--highLighterBg);
+}
+
+#Statistics .items .item p{
+    margin: 0;
+    color: var(--logoColor);
+    font-weight: 600;
+}
+
+@media screen and (max-width:767px) {
+    #Statistics .items{
+        margin-top: 1rem;
+    }   
+}
+
+@media screen and (max-width:360px) {
+    #Statistics .items{
+        flex-direction: column;
+    }
+    #Statistics .items .item{
+        width: 100%;
+        margin: 0 0 .5rem 0;
+    }
+}
+
+/* Store */
+
+#Store{
+    background-color: rgb(247, 247, 247);
+    padding: 3rem 0;
+}
+
+#Store h2{
+    color: var(--logoColor);
+    margin-bottom: 2rem;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#Store .row .apartment{
+    margin-bottom: 2rem;
+}
+
+#Store .row .apartment .img{
+    overflow: hidden;
+}
+
+#Store .row .apartment .img img{
+    width: 100%;
+    transition: transform 500ms;
+}
+
+#Store .row .apartment .img:hover img{
+    transform: rotate(3deg) scale(1.1);
+}
+
+#Store .row .apartment .details{
+    padding: 1rem 1.5rem;
+}
+
+.apartment .details h6{
+    color: var(--logoColor);
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+}
+
+.apartment .details .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details .price span{
+    display: block;
+    color: var(--highLighterBg);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.details .price .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details .price .icons .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons .icon i{
+    margin-right: 2px;
+    font-size: 19px;
+    color: #777;
+}
+
+.icons .icon p{
+    margin: 0 6px 0 0;
+    color: #aaa;
+    font-size: 13px;
+}
+
+@media screen and (max-width:280px) {
+    .details .price .icons{
+        flex-direction: column;
+    }
+    .details .price .icons .icon{
+        margin: 5px 0;
+    }
+}
+
+/* btn */
+
+#Store .btnBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#Store .btnBox .inputBox{
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    margin-right: 3rem;
+    width: 40%;
+}
+
+.btnBox .inputBox i{
+    font-size: 15px;
+    color: var(--logoColor);
+    width: 10%;
+    text-align: center;
+}
+
+.btnBox .inputBox input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: .8rem 0;
+    width: 90%;
+}
+
+.btnBox .inputBox button{
+    background-color: var(--highLighterBg);
+    border: none;
+    padding: .8rem;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 500;
+    transition: color 400ms;
+}
+
+.btnBox .inputBox button:hover{
+    color: #fff;
+}
+
+.btnBox .allBtn{
+    background-color: #eee;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 400ms;
+}
+
+.btnBox .allBtn a{
+    display: block;
+    padding: .6rem;
+    color: var(--logoColor);
+    transition: color 400ms;
+    font-weight: 500;
+}
+
+.btnBox .allBtn:hover{
+    background-color: var(--highLighterBg);
+}
+
+.btnBox .allBtn a:hover{
+    color: #fff;
+}
+
+@media screen and (max-width:767px){
+    #Store .btnBox{
+        flex-direction: column;
+    }
+
+    #Store .btnBox .inputBox{
+        margin: 0;
+        width: 75%;
+    }
+
+    .btnBox .allBtn{
+        margin-top: 1rem;
+    }
+}
+
