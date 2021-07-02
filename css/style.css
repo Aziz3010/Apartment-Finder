@@ -731,7 +731,20 @@ a:hover{
 }
 
 #Services .topText{
+    width: fit-content;
     margin-bottom: 2rem;
+}
+
+#Services .topText h2{
+    color: var(--logoColor);
+    margin-bottom: 1rem;
+    font-size: 30px;
+    font-weight: 600;   
+}
+
+#Services .topText p{
+    font-size: 13px;
+    color: var(--logoColor);
 }
 
 #Services .row .image{
@@ -794,3 +807,107 @@ a:hover{
 }
 
 /* Agent */
+
+#Agent{
+    background-color: #f6f5f4;
+    padding: 4rem 0;
+}
+
+#Agent .topText{
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+#Agent .topText h2{
+    color: var(--logoColor);
+    margin-bottom: 1rem;
+    font-size: 30px;
+    font-weight: 600;   
+}
+
+#Agent .topText p{
+    font-size: 13px;
+    color: var(--logoColor);
+}
+
+#Agent .agents .image{
+    overflow: hidden;
+}
+
+#Agent .agents .image img{
+    width: 100%;
+    transition: transform 400ms;
+}
+
+#Agent .agents .image:hover img{
+    transform: scale(1.1,1.1);
+}
+
+#Agent .agents .caption{
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+.agents .caption >h6{
+    color: var(--logoColor);
+    font-weight: 600;
+}
+
+.agents .caption .name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agents .caption .name h6{
+    font-size: 11px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--highLighterBg);
+}
+
+.agents .caption .name .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption .name .social i{
+    font-size: 20px;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: color 400ms;
+    color: var(--logoColor);
+}
+
+.caption .name .social i:last-child{
+    margin: 0;
+    transition: color 400ms;
+}
+
+.caption .name .social i:hover{
+    color:#3451f8;
+}
+
+.caption .name .social i:last-child:hover{
+    color: #f31325;
+}
+
+@media screen and (max-width:991px) {
+    .agents .caption .name {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .agents .caption .name h6{
+        margin-bottom: .5rem;
+    }
+}
+
+@media screen and (max-width:767px){
+    #Agent .agents{
+        margin-bottom: 1rem;
+    }
+}
+
+/*  */
