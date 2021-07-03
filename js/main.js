@@ -14,3 +14,13 @@ $("#btnBox").click(function(){
         $(".joinBox").slideUp(1000);
     }
 })
+
+
+// go to section smoothly
+$("#Navbar #Nav ul li a").click(function(e){
+
+    let currentSection = $(e.target).attr("href")
+    let sectionOffset = $(`${currentSection}`).offset().top;
+    $("body , html").animate({scrollTop:sectionOffset},1500)
+
+});
