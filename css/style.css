@@ -26,24 +26,25 @@ ul{
 
 a{
     text-decoration: none;
-    color: var(--logoColor);
+    color: #fff;
     font-weight: 500;
 }
 
 a:hover{
     text-decoration: none;
-    color: #28474e;
+    color: #aaa;
 }
 
 /* Navbar */
 
 #Navbar{
-    background-color: #eee;
+    background-color: #1f373d;
     padding: .5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 20000;
+    box-shadow: 0px 0px 8px #aaa;
 }
 
 #Navbar .container{
@@ -66,7 +67,7 @@ a:hover{
 }
 
 .logo h2{
-    color: var(--logoColor);
+    color: #fff;
     padding: 0;
     margin: 0;
     font-size: 35px;
@@ -86,7 +87,7 @@ a:hover{
 }
 
 #Navbar #btnBox #btnMenu span{
-    background-color: var(--logoColor);
+    background-color: #fff;
     display: block;
     height: 3px;
     margin: 4px 0;
@@ -170,7 +171,6 @@ a:hover{
         margin-top: .5rem;
         width: 60%;
         margin-left: auto;
-        background-color: #cce6f0;
         border-radius: 5px 5px 0 0;
         display: none;
     }
@@ -183,7 +183,6 @@ a:hover{
 
     #Navbar .joinBox{
         width: 60% !important;
-        background-color: #ddf0f8;
         border-radius: 0 0 5px 5px;
         margin-left: auto;
         flex-direction: column;
@@ -197,6 +196,12 @@ a:hover{
         width: fit-content;
     }
 
+}
+
+@media screen and (max-width:576px){
+    #Navbar .container{
+        padding: .5rem 1rem;
+    }
 }
 
 @media screen and (max-width:245px) {
@@ -910,4 +915,171 @@ a:hover{
     }
 }
 
-/*  */
+/* featueres */
+
+#featuer{
+    padding: 4rem 0;
+}
+
+#featuer .image{
+    position: relative;
+}
+
+#featuer .row1 .image::before,
+#featuer .row2 .image::before{
+    font-family: "Font Awesome 5 free";
+    font-weight: 600;
+    width: fit-content;
+    content: "\f3c5  Melbourne,Australia";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: .5rem;
+    transform: translateX(-50%);
+    background-color: var(--highLighterBg);
+    color: #fff;
+}
+
+#featuer .image img{
+    width: 100%;
+}
+
+#featuer .text h4{
+    color: var(--logoColor);
+    margin-bottom: 1.5rem;
+}
+
+#featuer .text p{
+    margin: 0;
+    font-size: 13px;
+    color: var(--logoColor);
+}
+
+@media screen and (max-width:767px) {
+    #featuer .row{
+        margin-bottom: .5rem;
+    }
+
+    #featuer .row1 .textBox,
+    #featuer .row3 .textBox{
+        order: 0;
+    }
+
+    #featuer .row1 .imageBox,
+    #featuer .row3 .imageBox{
+        order: 1;
+    }
+
+}
+
+/* Footer */
+
+Footer{
+    padding: 3rem 0;
+    background-color: #1f373d;
+}
+
+Footer .row1{
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+Footer .logoText h2{
+    color: #fff;
+}
+
+Footer .inpBox{
+    position: relative;
+    border-radius: 5px;
+}
+
+Footer .inpBox input{
+    width: 100%;
+    padding: .5rem .8rem;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+Footer .inpBox::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 1.5rem;
+    content: "\f30b";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #1f373d;
+    cursor: pointer;
+}
+
+Footer .row2 .col-md-4{
+    color: #fff;
+}
+
+.row2 .col-md-4 h5{
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.row2 .col-md-4 p{
+    font-size: 13px;
+}
+
+Footer .row2 .col-md-2{
+    text-align: center;
+}
+
+.row2 .col-md-2 h6{
+    color: #4d606b;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.row2 .col-md-2 p{
+    margin: 0 0 .5rem 0;
+    font-size: 13px;
+}
+
+.row2 .col-md-2 p a{
+    color: #eee;
+}
+
+@media screen and (max-width:767px) {
+    Footer .inpBox{
+        margin-top: 1rem;
+        width: 75%;
+    }
+    Footer .row2 .col-md-4{
+        text-align: center;
+        margin-bottom: 3rem !important;
+    }
+    Footer .row2 .col-md-4,
+    Footer .row2 .col-md-2{
+        margin-bottom: 2rem;
+    }
+    Footer .row2 .col-md-2:nth-child(4),
+    Footer .row2 .col-md-2:nth-child(5){
+        margin-bottom: 0rem;
+    }
+}
+
+@media screen and (max-width:360px){
+    Footer .row2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    Footer .row2 .col-md-2{
+        margin-bottom: 3rem !important;
+    }
+    Footer .row2 .col-md-2:last-child{
+        margin: 0 !important;
+    }
+
+}
